@@ -42,6 +42,20 @@ var requestBody=Request.getBody();
 nlapiLogExecution('Debug','DoCapture',requestBody);
 var XXX=0;
 
+var PaymentURl='https://api-3t.sandbox.paypal.com/nvp';
+var body='';
+body+='&USER=vamsi-facilitator_api1.netscoretech.com';
+body+='&PWD=BJR5MNVD3QRW65TU';
+body+='&SIGNATURE=AxWyhYIg8D5KIXCwlhj3d1yBOn5zA2AugWOKqAHk0m2a2LNdYhF9xUIi';
+body+='&METHOD=DoCapture';
+body+='&AUTHORIZATIONID='+TranId;
+body+='&AMT=5.00';
+body+='&COMPLETETYPE=NotComplete';
+body+='&VERSION=115';
+var Request=nlapiRequestURL(PaymentURl,body,null,'POST');
+var requestBody=Request.getBody();
+nlapiLogExecution('Debug','DoCapture',requestBody);
+var XXX=0;
 
 var PaymentURl='https://api-3t.sandbox.paypal.com/nvp';
 var body='';
