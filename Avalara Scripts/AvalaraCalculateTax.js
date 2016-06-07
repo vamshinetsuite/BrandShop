@@ -27,7 +27,6 @@
 ** @version: 1.0
 **************************************************************************************/
 function calculateAvaTax(type) {
-
     var currentContext = nlapiGetContext();
     var executionContext = currentContext.getExecutionContext();
     var recType = nlapiGetRecordType();
@@ -617,6 +616,6 @@ function populateAvaTax(type) {
             }
         }
     } catch (e) {
-        nlapiLogExecution('ERROR', 'e', e);
+        nlapiLogExecution('ERROR', 'e', e.toString());
     }
 }
