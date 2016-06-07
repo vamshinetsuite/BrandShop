@@ -1,3 +1,4 @@
+// This script is used for creating payments in NetSuite.
 var PaymentURl='https://api-3t.sandbox.paypal.com/nvp';
 var body='';
 body+='&USER=vamsi-facilitator_api1.netscoretech.com';
